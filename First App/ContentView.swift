@@ -28,7 +28,7 @@ struct ContentView: View {
                 Text("%")
             }
             if let totalNum = Double(total) {
-                Text("value is a number")
+                Text("Tip Amount: $\(totalNum * tipPercent * 0.01, specifier: "%0.2f")")
             }
         }
         .padding()
