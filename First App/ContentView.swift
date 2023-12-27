@@ -17,9 +17,6 @@ struct ContentView: View {
                     .imageScale(.large)
                 .foregroundStyle(.tint)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Text("Tip Calculator")
-                    .font(.largeTitle)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             }
             HStack {
                 Text("$")
@@ -27,8 +24,13 @@ struct ContentView: View {
             }
             HStack {
                 Slider(value: $tipPercent, in: 1...30, step: 1.0)
-                Text("\(tipPercent)")
+                Text("\(Int(tipPercent))")
                 Text("%")
+            }
+            if let totalNum = Double(total) {
+                Text("Tip Amount: $\(totalNum * tipPercent * 0.01, specifier: "%0.2f")")
+            } else {
+                Text("Please add a numeric value")
             }
         }
         .padding()
