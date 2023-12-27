@@ -14,7 +14,10 @@ struct ContentView: View {
                 Image(systemName: "dollarsign.circle.fill")
                     .imageScale(.large)
                 .foregroundStyle(.tint)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 Text("Tip Calculator")
+                    .font(.largeTitle)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             }
             HStack {
                 
