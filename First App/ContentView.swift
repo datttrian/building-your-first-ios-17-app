@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var total = "100"
+    @State var total = ""
     var body: some View {
         VStack {
             HStack {
@@ -23,7 +23,7 @@ struct ContentView: View {
             HStack {
                 
                 Text("$")
-                Text(total)
+                TextField("Amount", text: $total)
             }
             
         }
