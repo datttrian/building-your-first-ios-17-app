@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var total = "100"
     var body: some View {
         VStack {
             HStack {
@@ -22,7 +23,7 @@ struct ContentView: View {
             HStack {
                 
                 Text("$")
-                Text("[Amount]")
+                Text(total)
             }
             
         }
