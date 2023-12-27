@@ -29,6 +29,8 @@ struct ContentView: View {
             }
             if let totalNum = Double(total) {
                 Text("Tip Amount: $\(totalNum * tipPercent * 0.01, specifier: "%0.2f")")
+            } else {
+                Text("Please add a numeric value")
             }
         }
         .padding()
